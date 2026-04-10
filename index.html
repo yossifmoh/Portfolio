@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="h-full">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -19,14 +19,11 @@
 
         html,
         body {
-            height: 100%;
             scroll-behavior: smooth;
         }
 
         .portfolio-wrap {
-            height: 100%;
             width: 100%;
-            overflow-y: auto;
             overflow-x: hidden;
         }
 
@@ -141,7 +138,7 @@
     </style>
 </head>
 
-<body class="h-full">
+<body>
     <div class="grain-overlay"></div>
     <div class="portfolio-wrap">
 
@@ -253,9 +250,9 @@
         const skills = ['Data Analysis', 'Excel', 'SQL', 'Python', 'Angular', 'Spring Boot', 'MySQL', 'Software Testing', 'Java', 'Communication', 'Problem Solving'];
 
         const projects = [
-            { title: 'Tareeky Van', desc: 'Marketing plan for a startup concept presented to students.', tags: ['Marketing', 'Strategy'] },
-            { title: 'Fintech Analysis', desc: 'Analyzed fintech applications focusing on user behavior and growth.', tags: ['Data', 'Analysis'] },
-            { title: 'VOLTA', desc: 'Fitness business concept project focusing on branding and engagement.', tags: ['Branding', 'Fitness'] }
+            { title: 'Tareeky Van', desc: 'Built a comprehensive dashboard to track van logistics and delivery performance.', tags: ['Data Analysis'], link: 'https://discover-caravaning-1hei8g5.gamma.site' },
+            { title: 'Fintech Dashboard', desc: 'Modern financial interface design focusing on user experience and data visualization.', tags: ['Branding & Design'], link: 'https://www.canva.com/design/DAGZoyKlw9M/8GjHxb8FfSJ4R0aoMjbV5g/edit' },
+            { title: 'Volta Physique', desc: 'A specialized platform for fitness tracking and bodybuilding programming.', tags: ['Fitness Programming'], link: 'https://voltaphysique.github.io' }
         ];
 
         // Render Skills
@@ -271,7 +268,7 @@
         </div>
         <h3 class="text-2xl font-bold mb-3 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">${p.title}</h3>
         <p class="text-sm text-[#8A8070] mb-6">${p.desc}</p>
-        <div class="flex items-center gap-2 text-sm text-[#D4A45A] font-bold">View Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></div>
+        <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
       </div>
     `).join('');
 
