@@ -197,19 +197,20 @@
 
         .modal-close {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(12, 12, 12, 0.8);
+            top: 1.5rem;
+            right: 1.5rem;
+            background: #1A1510;
             color: #D4A45A;
             border: 1px solid #D4A45A;
             border-radius: 50%;
-            width: 36px;
-            height: 36px;
+            width: 44px;
+            height: 44px;
             display: flex;
             justify-content: center;
             align-items: center;
             cursor: pointer;
             transition: all 0.3s ease;
+            z-index: 1001;
         }
 
         .modal-close:hover {
@@ -346,10 +347,10 @@
 
         <!-- Certificate Modal HTML -->
         <div class="modal-overlay" id="cert-modal" onclick="closeModal(event)">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
             <div class="modal-content" onclick="event.stopPropagation()">
-                <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
                 <iframe src="" class="modal-iframe" id="cert-modal-iframe" allow="autoplay"></iframe>
             </div>
         </div>
