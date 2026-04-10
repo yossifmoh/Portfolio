@@ -63,3 +63,5 @@ const certificates = [
         link: 'https://drive.google.com/file/d/1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea/preview'
     }
 ];
+
+const viewAllCertificatesLink = 'https://drive.google.com/drive/folders/1eqc6nwRs8Nx1TF7YrvPxSeLNjKrazB6p?usp=drive_link';
