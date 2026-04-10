@@ -247,7 +247,12 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-14"
                         style="font-family: 'Syne', sans-serif; color: #F0E6D3;">Certificates</h2>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6" id="certificates-grid"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid"></div>
+                <div class="scroll-reveal flex justify-center">
+                    <a href="#" target="_blank" rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-wide border border-[#D4A45A] text-[#D4A45A] hover:bg-[#D4A45A] hover:text-[#0C0C0C] transition-all">VIEW
+                        ALL <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                </div>
             </div>
         </section>
 
@@ -281,9 +286,12 @@
         ];
 
         const certificates = [
-            { title: 'Data Analytics Certificate', issuer: 'Google / Coursera', date: '2025', link: '#' },
-            { title: 'Software Testing Fundamentals', issuer: 'ISTQB', date: '2024', link: '#' },
-            { title: 'Full Stack Web Development', issuer: 'Udacity', date: '2023', link: '#' }
+            { title: 'Full Stack Developer', issuer: 'Soulco CodeCraft', date: '2025', desc: 'Completed 8-week intensive bootcamp in Angular & Spring Boot.', link: '#' },
+            { title: 'Software Tester', issuer: 'DEPI English Track', date: '2025', desc: 'Specialized in Manual and Automation testing methodologies.', link: '#' },
+            { title: 'Data Science Orientation', issuer: 'IBM', date: '2025', desc: 'Professional credential in data science foundations and tools.', link: '#' },
+            { title: 'Digital Marketing Top Achiever', issuer: 'IOM & Sprints', date: '2024', desc: 'Selected as a Top Achiever in the Digital Marketing program.', link: '#' },
+            { title: 'Stock Market Instructor', issuer: 'AIBE SAMS', date: '2025', desc: 'Delivered 7+ educational sessions on trading and market analysis.', link: '#' },
+            { title: 'SME Banking Intern', issuer: 'CIB Egypt', date: '2024', desc: 'Summer Internship Program for top-performing students.', link: '#' }
         ];
 
         // Render Skills
@@ -312,7 +320,8 @@
             <i data-lucide="award" class="text-[#D4A45A] w-5 h-5"></i>
           </div>
           <h3 class="text-xl font-bold mb-2 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">${c.title}</h3>
-          <p class="text-sm text-[#8A8070] mb-6">${c.issuer}</p>
+          <p class="text-xs font-bold tracking-wide uppercase text-[#D4A45A] mb-2">${c.issuer}</p>
+          <p class="text-sm text-[#8A8070] mb-6">${c.desc}</p>
         </div>
         <a href="${c.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Certificate <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
       </div>
