@@ -1,3 +1,7 @@
+const skills = [
+    'Data Analysis', 'Excel', 'SQL', 'Python', 'Angular', 'Spring Boot', 'MySQL', 'Software Testing', 'Java', 'Communication', 'Problem Solving'
+];
+
 const projects = [
     {
         title: "Tareeky Van",
@@ -9,7 +13,7 @@ const projects = [
         title: "Fintech Dashboard",
         category: "Branding & Design",
         description: "Modern financial interface design focusing on user experience and data visualization.",
-        link: "https://www.canva.com/design/DAGZoyKlw9M/8GjHxb8FfSJ4R0aoMjbV5g/edit"
+        link: "https://canva.link/oy1mb2j25rh0smv"
     },
     {
         title: "Volta Physique",
