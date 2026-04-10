@@ -13,7 +13,7 @@ const projects = [
         title: "Fintech Dashboard",
         category: "Branding & Design",
         description: "Modern financial interface design focusing on user experience and data visualization.",
-        link: "https://canva.link/oy1mb2j25rh0smv"
+        link: "https://www.canva.com/design/DAGZoyKlw9M/8GjHxb8FfSJ4R0aoMjbV5g/view?embed"
     },
     {
         title: "Volta Physique",
@@ -68,4 +68,4 @@ const certificates = [
     }
 ];
 
-const viewAllCertificatesLink = 'https://drive.google.com/drive/folders/1eqc6nwRs8Nx1TF7YrvPxSeLNjKrazB6p?usp=drive_link';
+const viewAllCertificatesLink = 'https://drive.google.com/embeddedfolderview?id=1eqc6nwRs8Nx1TF7YrvPxSeLNjKrazB6p#grid';
