@@ -303,21 +303,7 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-14"
                         style="font-family: 'Syne', sans-serif; color: #F0E6D3;">Projects</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
-                    <div *ngFor="let p of projects"
-                        class="project-card scroll-reveal p-10 bg-[#1A1510] border border-[#2A2520]">
-                        <div class="flex gap-2 mb-6">
-                            <span
-                                class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">{{p.category}}</span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">
-                            {{p.title}}</h3>
-                        <p class="text-sm text-[#8A8070] mb-6">{{p.description}}</p>
-                        <a [href]="p.link" target="_blank" rel="noopener noreferrer"
-                            class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View
-                            Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
-                    </div>
-                </div>
+                <div class="grid md:grid-cols-2 gap-6" id="projects-grid"></div>
             </div>
         </section>
 
@@ -329,25 +315,7 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-14"
                         style="font-family: 'Syne', sans-serif; color: #F0E6D3;">Certificates</h2>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid">
-                    <div *ngFor="let c of certificates"
-                        class="project-card scroll-reveal p-8 bg-[#1A1510] border border-[#2A2520] flex flex-col justify-between">
-                        <div>
-                            <div class="flex justify-between items-start mb-4">
-                                <span
-                                    class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">{{c.date}}</span>
-                                <i data-lucide="award" class="text-[#D4A45A] w-5 h-5"></i>
-                            </div>
-                            <h3 class="text-xl font-bold mb-2 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">
-                                {{c.title}}</h3>
-                            <p class="text-xs font-bold tracking-wide uppercase text-[#D4A45A] mb-2">{{c.issuer}}</p>
-                            <p class="text-sm text-[#8A8070] mb-6">{{c.desc}}</p>
-                        </div>
-                        <button (click)="openModal(c.link)"
-                            class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View
-                            Certificate <i data-lucide="maximize" class="w-4 h-4"></i></button>
-                    </div>
-                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid"></div>
                 <div class="scroll-reveal flex justify-center">
                     <a href="#" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-wide border border-[#D4A45A] text-[#D4A45A] hover:bg-[#D4A45A] hover:text-[#0C0C0C] transition-all">VIEW
@@ -389,10 +357,53 @@
         // Data
         const skills = ['Data Analysis', 'Excel', 'SQL', 'Python', 'Angular', 'Spring Boot', 'MySQL', 'Software Testing', 'Java', 'Communication', 'Problem Solving'];
 
+        const projects = [
+            { title: "Tareeky Van", category: "Data Analysis", description: "Built a comprehensive dashboard to track van logistics and delivery performance.", link: "https://discover-caravaning-1hei8g5.gamma.site" },
+            { title: "Fintech Dashboard", category: "Branding & Design", description: "Modern financial interface design focusing on user experience and data visualization.", link: "https://www.canva.com/design/DAGZoyKlw9M/8GjHxb8FfSJ4R0aoMjbV5g/edit" },
+            { title: "Volta Physique", category: "Fitness Programming", description: "A specialized platform for fitness tracking and bodybuilding programming.", link: "https://voltaphysique.github.io" }
+        ];
+
+        const certificates = [
+            { title: 'Full Stack Developer', issuer: 'Soulco CodeCraft', date: '2025', desc: 'Completed 8-week intensive bootcamp in Angular & Spring Boot.', link: 'https://drive.google.com/uc?export=view&id=11myB_oIsaxrljMI7Q1iMXnUxAxhVyItJ' },
+            { title: 'Software Tester', issuer: 'DEPI English Track', date: '2025', desc: 'Specialized in Manual and Automation testing methodologies.', link: 'https://drive.google.com/uc?export=view&id=1cbZ7cX6UbCIapeP-0OoGpk43p3TBCmXn' },
+            { title: 'Data Science Orientation', issuer: 'IBM', date: '2025', desc: 'Professional credential in data science foundations and tools.', link: 'https://drive.google.com/uc?export=view&id=1VQz-tmTqKWQ9Nql_r-R_DHUtESEqceUN' },
+            { title: 'Digital Marketing Top Achiever', issuer: 'IOM & Sprints', date: '2024', desc: 'Selected as a Top Achiever in the Digital Marketing program.', link: 'https://drive.google.com/uc?export=view&id=1nzaXbmN6HCkYed9ayT7sdaVFqK1tBggu' },
+            { title: 'Stock Market Instructor', issuer: 'AIBE SAMS', date: '2025', desc: 'Delivered 7+ educational sessions on trading and market analysis.', link: 'https://drive.google.com/uc?export=view&id=1RlDNT45XhiWsE5hZ_SFlh4LPhmXLOHsN' },
+            { title: 'SME Banking Intern', issuer: 'CIB Egypt', date: '2025', desc: 'Summer Internship Program for top-performing students.', link: 'https://drive.google.com/uc?export=view&id=1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea' }
+        ];
+
         // Render Skills
         document.getElementById('skills-container').innerHTML = skills.map(s =>
             `<span class="px-3 py-1 bg-[#1A1510] text-[#F0E6D3] text-xs border border-[#2A2520]">${s}</span>`
         ).join('');
+
+        // Render Projects
+        document.getElementById('projects-grid').innerHTML = projects.map(p => `
+            <div class="project-card scroll-reveal p-10 bg-[#1A1510] border border-[#2A2520]">
+                <div class="flex gap-2 mb-6">
+                    <span class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">${p.category}</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-3 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">${p.title}</h3>
+                <p class="text-sm text-[#8A8070] mb-6">${p.description}</p>
+                <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+            </div>
+        `).join('');
+
+        // Render Certificates
+        document.getElementById('certificates-grid').innerHTML = certificates.map(c => `
+            <div class="project-card scroll-reveal p-8 bg-[#1A1510] border border-[#2A2520] flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">${c.date}</span>
+                        <i data-lucide="award" class="text-[#D4A45A] w-5 h-5"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">${c.title}</h3>
+                    <p class="text-xs font-bold tracking-wide uppercase text-[#D4A45A] mb-2">${c.issuer}</p>
+                    <p class="text-sm text-[#8A8070] mb-6">${c.desc}</p>
+                </div>
+                <button onclick="openModal('${c.link}')" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Certificate <i data-lucide="maximize" class="w-4 h-4"></i></button>
+            </div>
+        `).join('');
 
         // Initialize Icons
         lucide.createIcons();
