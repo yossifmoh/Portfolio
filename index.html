@@ -186,11 +186,13 @@
             transform: scale(1);
         }
 
-        .modal-image {
-            max-width: 100%;
-            max-height: 85vh;
+        .modal-iframe {
+            width: 90vw;
+            height: 85vh;
+            max-width: 1000px;
+            border: none;
             display: block;
-            object-fit: contain;
+            border-radius: 4px;
         }
 
         .modal-close {
@@ -348,7 +350,7 @@
                 <button class="modal-close" onclick="closeModal()" aria-label="Close modal">
                     <i data-lucide="x" class="w-5 h-5"></i>
                 </button>
-                <img src="" alt="Certificate" class="modal-image" id="cert-modal-img">
+                <iframe src="" class="modal-iframe" id="cert-modal-iframe" allow="autoplay"></iframe>
             </div>
         </div>
     </div>
@@ -364,12 +366,12 @@
         ];
 
         const certificates = [
-            { title: 'Full Stack Developer', issuer: 'Soulco CodeCraft', date: '2025', desc: 'Completed 8-week intensive bootcamp in Angular & Spring Boot.', link: 'https://drive.google.com/uc?export=view&id=11myB_oIsaxrljMI7Q1iMXnUxAxhVyItJ' },
-            { title: 'Software Tester', issuer: 'DEPI English Track', date: '2025', desc: 'Specialized in Manual and Automation testing methodologies.', link: 'https://drive.google.com/uc?export=view&id=1cbZ7cX6UbCIapeP-0OoGpk43p3TBCmXn' },
-            { title: 'Data Science Orientation', issuer: 'IBM', date: '2025', desc: 'Professional credential in data science foundations and tools.', link: 'https://drive.google.com/uc?export=view&id=1VQz-tmTqKWQ9Nql_r-R_DHUtESEqceUN' },
-            { title: 'Digital Marketing Top Achiever', issuer: 'IOM & Sprints', date: '2024', desc: 'Selected as a Top Achiever in the Digital Marketing program.', link: 'https://drive.google.com/uc?export=view&id=1nzaXbmN6HCkYed9ayT7sdaVFqK1tBggu' },
-            { title: 'Stock Market Instructor', issuer: 'AIBE SAMS', date: '2025', desc: 'Delivered 7+ educational sessions on trading and market analysis.', link: 'https://drive.google.com/uc?export=view&id=1RlDNT45XhiWsE5hZ_SFlh4LPhmXLOHsN' },
-            { title: 'SME Banking Intern', issuer: 'CIB Egypt', date: '2025', desc: 'Summer Internship Program for top-performing students.', link: 'https://drive.google.com/uc?export=view&id=1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea' }
+            { title: 'Full Stack Developer', issuer: 'Soulco CodeCraft', date: '2025', desc: 'Completed 8-week intensive bootcamp in Angular & Spring Boot.', link: 'https://drive.google.com/file/d/11myB_oIsaxrljMI7Q1iMXnUxAxhVyItJ/preview' },
+            { title: 'Software Tester', issuer: 'DEPI English Track', date: '2025', desc: 'Specialized in Manual and Automation testing methodologies.', link: 'https://drive.google.com/file/d/1cbZ7cX6UbCIapeP-0OoGpk43p3TBCmXn/preview' },
+            { title: 'Data Science Orientation', issuer: 'IBM', date: '2025', desc: 'Professional credential in data science foundations and tools.', link: 'https://drive.google.com/file/d/1VQz-tmTqKWQ9Nql_r-R_DHUtESEqceUN/preview' },
+            { title: 'Digital Marketing Top Achiever', issuer: 'IOM & Sprints', date: '2024', desc: 'Selected as a Top Achiever in the Digital Marketing program.', link: 'https://drive.google.com/file/d/1nzaXbmN6HCkYed9ayT7sdaVFqK1tBggu/preview' },
+            { title: 'Stock Market Instructor', issuer: 'AIBE SAMS', date: '2025', desc: 'Delivered 7+ educational sessions on trading and market analysis.', link: 'https://drive.google.com/file/d/1RlDNT45XhiWsE5hZ_SFlh4LPhmXLOHsN/preview' },
+            { title: 'SME Banking Intern', issuer: 'CIB Egypt', date: '2025', desc: 'Summer Internship Program for top-performing students.', link: 'https://drive.google.com/file/d/1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea/preview' }
         ];
 
         // Render Skills
@@ -415,18 +417,23 @@
         document.querySelectorAll('.scroll-reveal').forEach(el => observer.observe(el));
 
         // Modal Logic
-        function openModal(imageSrc) {
+        function openModal(fileSrc) {
             const modal = document.getElementById('cert-modal');
-            const modalImg = document.getElementById('cert-modal-img');
-            modalImg.src = imageSrc;
+            const modalIframe = document.getElementById('cert-modal-iframe');
+            modalIframe.src = fileSrc;
             modal.classList.add('active');
             document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             const modal = document.getElementById('cert-modal');
+            const modalIframe = document.getElementById('cert-modal-iframe');
             modal.classList.remove('active');
             document.body.style.overflow = '';
+            // Clear iframe src after animation to prevent flickering next time
+            setTimeout(() => {
+                if (!modal.classList.contains('active')) modalIframe.src = '';
+            }, 300);
         }
 
         document.addEventListener('keydown', (e) => {

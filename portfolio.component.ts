@@ -25,41 +25,41 @@ const certificates = [
         issuer: 'Soulco CodeCraft',
         date: '2025',
         desc: 'Completed 8-week intensive bootcamp in Angular & Spring Boot.',
-        link: 'https://drive.google.com/uc?export=view&id=11myB_oIsaxrljMI7Q1iMXnUxAxhVyItJ'
+        link: 'https://drive.google.com/file/d/11myB_oIsaxrljMI7Q1iMXnUxAxhVyItJ/preview'
     },
     {
         title: 'Software Tester',
         issuer: 'DEPI English Track',
         date: '2025',
         desc: 'Specialized in Manual and Automation testing methodologies.',
-        link: 'https://drive.google.com/uc?export=view&id=1cbZ7cX6UbCIapeP-0OoGpk43p3TBCmXn'
+        link: 'https://drive.google.com/file/d/1cbZ7cX6UbCIapeP-0OoGpk43p3TBCmXn/preview'
     },
     {
         title: 'Data Science Orientation',
         issuer: 'IBM',
         date: '2025',
         desc: 'Professional credential in data science foundations and tools.',
-        link: 'https://drive.google.com/uc?export=view&id=1VQz-tmTqKWQ9Nql_r-R_DHUtESEqceUN'
+        link: 'https://drive.google.com/file/d/1VQz-tmTqKWQ9Nql_r-R_DHUtESEqceUN/preview'
     },
     {
         title: 'Digital Marketing Top Achiever',
         issuer: 'IOM & Sprints',
         date: '2024',
         desc: 'Selected as a Top Achiever in the Digital Marketing program.',
-        link: 'https://drive.google.com/uc?export=view&id=1nzaXbmN6HCkYed9ayT7sdaVFqK1tBggu'
+        link: 'https://drive.google.com/file/d/1nzaXbmN6HCkYed9ayT7sdaVFqK1tBggu/preview'
     },
     {
         title: 'Stock Market Instructor',
         issuer: 'AIBE SAMS',
         date: '2025',
         desc: 'Delivered 7+ educational sessions on trading and market analysis.',
-        link: 'https://drive.google.com/uc?export=view&id=1RlDNT45XhiWsE5hZ_SFlh4LPhmXLOHsN'
+        link: 'https://drive.google.com/file/d/1RlDNT45XhiWsE5hZ_SFlh4LPhmXLOHsN/preview'
     },
     {
         title: 'SME Banking Intern',
         issuer: 'CIB Egypt',
         date: '2025',
         desc: 'Summer Internship Program for top-performing students.',
-        link: 'https://drive.google.com/uc?export=view&id=1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea'
+        link: 'https://drive.google.com/file/d/1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea/preview'
     }
 ];
