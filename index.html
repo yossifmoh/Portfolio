@@ -109,6 +109,17 @@
             color: #D4A45A !important;
         }
 
+        /* Certificate Icon Animation on Hover */
+        .project-card [data-lucide="award"] {
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.4s ease;
+        }
+
+        .project-card:hover [data-lucide="award"] {
+            transform: scale(1.25) rotate(-15deg);
+            color: #F0E6D3;
+            /* Main heading color for a highlight effect */
+        }
+
         /* Custom Scrollbar for Chrome, Edge, and Safari */
         ::-webkit-scrollbar {
             width: 8px;
