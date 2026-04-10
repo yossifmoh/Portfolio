@@ -290,9 +290,9 @@
                     <div class="scroll-reveal">
                         <p class="text-sm tracking-[0.2em] uppercase mb-5" style="color: #D4A45A;">Skills & Tools</p>
                         <div class="flex flex-wrap gap-2 mb-8" id="skills-container"></div>
-                        <a href="Yossif_Abbas_CV.pdf" target="_blank"
+                        <button onclick="openModal('Yossif_Abbas_CV.pdf')"
                             class="px-6 py-3 text-sm font-semibold bg-[#D4A45A] text-[#0C0C0C] flex items-center gap-2 hover:scale-105 transition-all w-fit">
-                            View CV <i data-lucide="external-link" class="w-4 h-4"></i></a>
+                            View CV <i data-lucide="external-link" class="w-4 h-4"></i></button>
                     </div>
                 </div>
             </div>
@@ -320,10 +320,10 @@
                 </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid"></div>
                 <div class="scroll-reveal flex justify-center">
-                    <a href="https://drive.google.com/drive/folders/1eqc6nwRs8Nx1TF7YrvPxSeLNjKrazB6p?usp=drive_link"
-                        target="_blank" rel="noopener noreferrer"
+                    <button
+                        onclick="openModal('https://drive.google.com/drive/folders/1eqc6nwRs8Nx1TF7YrvPxSeLNjKrazB6p?usp=drive_link')"
                         class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-wide border border-[#D4A45A] text-[#D4A45A] hover:bg-[#D4A45A] hover:text-[#0C0C0C] transition-all">VIEW
-                        ALL <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        ALL <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
                 </div>
             </div>
         </section>
@@ -389,7 +389,7 @@
                 </div>
                 <h3 class="text-2xl font-bold mb-3 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">${p.title}</h3>
                 <p class="text-sm text-[#8A8070] mb-6">${p.description}</p>
-                <a href="${p.link}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+                <button onclick="openModal('${p.link}')" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></button>
             </div>
         `).join('');
 
