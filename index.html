@@ -303,7 +303,21 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-14"
                         style="font-family: 'Syne', sans-serif; color: #F0E6D3;">Projects</h2>
                 </div>
-                <div class="grid md:grid-cols-2 gap-6" id="projects-grid"></div>
+                <div class="grid md:grid-cols-2 gap-6" id="projects-grid">
+                    <div *ngFor="let p of projects"
+                        class="project-card scroll-reveal p-10 bg-[#1A1510] border border-[#2A2520]">
+                        <div class="flex gap-2 mb-6">
+                            <span
+                                class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">{{p.category}}</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">
+                            {{p.title}}</h3>
+                        <p class="text-sm text-[#8A8070] mb-6">{{p.description}}</p>
+                        <a [href]="p.link" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View
+                            Project <i data-lucide="arrow-up-right" class="w-4 h-4"></i></a>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -315,7 +329,25 @@
                     <h2 class="text-3xl md:text-5xl font-bold mb-14"
                         style="font-family: 'Syne', sans-serif; color: #F0E6D3;">Certificates</h2>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid"></div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" id="certificates-grid">
+                    <div *ngFor="let c of certificates"
+                        class="project-card scroll-reveal p-8 bg-[#1A1510] border border-[#2A2520] flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span
+                                    class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">{{c.date}}</span>
+                                <i data-lucide="award" class="text-[#D4A45A] w-5 h-5"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-[#F0E6D3]" style="font-family:'Syne',sans-serif">
+                                {{c.title}}</h3>
+                            <p class="text-xs font-bold tracking-wide uppercase text-[#D4A45A] mb-2">{{c.issuer}}</p>
+                            <p class="text-sm text-[#8A8070] mb-6">{{c.desc}}</p>
+                        </div>
+                        <button (click)="openModal(c.link)"
+                            class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View
+                            Certificate <i data-lucide="maximize" class="w-4 h-4"></i></button>
+                    </div>
+                </div>
                 <div class="scroll-reveal flex justify-center">
                     <a href="#" target="_blank" rel="noopener noreferrer"
                         class="inline-flex items-center gap-2 px-8 py-4 text-sm font-semibold tracking-wide border border-[#D4A45A] text-[#D4A45A] hover:bg-[#D4A45A] hover:text-[#0C0C0C] transition-all">VIEW
