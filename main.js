@@ -23,7 +23,7 @@ document.getElementById('skills-container').innerHTML = skills.map(s =>
 
 // Render Projects
 document.getElementById('projects-grid').innerHTML = projects.map(p => `
-    <div class="project-card scroll-reveal p-10 bg-[#1A1510] border border-[#2A2520]">
+    <div class="project-card scroll-reveal p-6 md:p-10 bg-[#1A1510] border border-[#2A2520]">
         <div class="flex gap-2 mb-6">
             <span class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">${p.category}</span>
         </div>
@@ -35,7 +35,7 @@ document.getElementById('projects-grid').innerHTML = projects.map(p => `
 
 // Render Certificates
 document.getElementById('certificates-grid').innerHTML = certificates.map(c => `
-    <div class="project-card scroll-reveal p-8 bg-[#1A1510] border border-[#2A2520] flex flex-col justify-between">
+    <div class="project-card scroll-reveal p-6 md:p-8 bg-[#1A1510] border border-[#2A2520] flex flex-col justify-between">
         <div>
             <div class="flex justify-between items-start mb-4">
                 <span class="text-[10px] tracking-widest uppercase px-2 py-1 border border-[#D4A45A33] text-[#D4A45A]">${c.date}</span>
