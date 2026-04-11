@@ -16,6 +16,12 @@ const certificates = [
     { title: 'SME Banking Intern', issuer: 'CIB Egypt', date: '2025', desc: 'Summer Internship Program for top-performing students.', link: 'https://drive.google.com/file/d/1a3LXVikztiZT1Xj2a-TlwER2OOlW01ea/preview' }
 ];
 
+const contactLinks = [
+    { title: 'Email Me', link: 'mailto:yossif.m.abbas@outlook.com', icon: 'mail', isPrimary: true },
+    { title: 'WhatsApp', link: 'https://wa.me/201013797792', icon: 'message-circle', isPrimary: false },
+    { title: 'LinkedIn', link: 'https://www.linkedin.com/in/yossif-abbas', icon: 'linkedin', isPrimary: false }
+];
+
 // Render Skills
 document.getElementById('skills-container').innerHTML = skills.map(s =>
     `<span class="px-3 py-1 bg-[#1A1510] text-[#F0E6D3] text-xs border border-[#2A2520]">${s}</span>`
@@ -47,6 +53,14 @@ document.getElementById('certificates-grid').innerHTML = certificates.map(c => `
         </div>
         <button onclick="openModal('${c.link}')" class="inline-flex items-center gap-2 text-sm text-[#D4A45A] font-bold hover:text-[#F0E6D3] transition-colors">View Certificate <i data-lucide="maximize" class="w-4 h-4"></i></button>
     </div>
+`).join('');
+
+// Render Contact Links
+document.getElementById('contact-links-container').innerHTML = contactLinks.map(c => `
+    <a href="${c.link}" ${!c.isPrimary ? 'target="_blank" rel="noopener noreferrer"' : ''}
+        class="inline-flex items-center gap-3 px-8 py-4 text-base font-bold transition-all ${c.isPrimary ? 'bg-[#D4A45A] text-[#0C0C0C] hover:scale-105' : 'border border-[#D4A45A] text-[#D4A45A] hover:bg-[#D4A45A] hover:text-[#0C0C0C]'}">
+        <i data-lucide="${c.icon}" class="w-5 h-5"></i> ${c.title}
+    </a>
 `).join('');
 
 // Initialize Icons

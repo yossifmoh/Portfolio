@@ -269,7 +269,7 @@
             <div class="relative min-h-[50vh] md:min-h-screen overflow-hidden stagger-5 group cursor-pointer">
                 <!-- Profile Picture -->
                 <img src="Yossif Abbas.jpg" alt="Yossif Abbas"
-                    class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700 grayscale group-hover:grayscale-0">
+                    class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-all duration-700">
                 <!-- Gradient Overlays to blend smoothly with the dark background -->
                 <div
                     class="absolute inset-0 bg-gradient-to-r from-[#0C0C0C] via-transparent to-transparent pointer-events-none">
@@ -343,19 +343,16 @@
         <!-- Contact Section -->
         <section id="contact" class="px-8 md:px-16 py-32 bg-[#0C0C0C] text-center">
             <div class="scroll-reveal max-w-3xl mx-auto">
-                <h2 class="text-4xl md:text-6xl font-bold mb-8 text-[#F0E6D3]" style="font-family: 'Syne', sans-serif;">
+                <h2 class="text-4xl md:text-6xl font-bold mb-10 text-[#F0E6D3]"
+                    style="font-family: 'Syne', sans-serif;">
                     Let's build<br>something great</h2>
-                <a href="mailto:yossif.m.abbas@outlook.com"
-                    class="inline-flex items-center gap-3 px-8 py-4 text-lg font-bold bg-[#D4A45A] text-[#0C0C0C] hover:scale-105 transition-all">
-                    <i data-lucide="mail"></i> yossif.m.abbas@outlook.com
-                </a>
+                <div id="contact-links-container" class="flex flex-wrap justify-center gap-4 md:gap-6"></div>
             </div>
         </section>
 
         <footer
-            class="px-8 py-12 flex flex-col md:flex-row gap-4 justify-between items-center text-center text-xs text-[#8A8070] bg-[#0C0C0C] border-t border-[#1A1510]">
+            class="px-8 py-12 flex justify-center items-center text-center text-xs text-[#8A8070] bg-[#0C0C0C] border-t border-[#1A1510]">
             <span>© 2026 Yossif Abbas</span>
-            <span>Crafted with Care</span>
         </footer>
 
         <!-- Certificate Modal HTML -->
